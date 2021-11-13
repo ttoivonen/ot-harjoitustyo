@@ -1,7 +1,7 @@
-##**Ohjelmistotekniikka, harjoitustyö**
+## **Ohjelmistotekniikka, harjoitustyö**
 
-##**Tehtävät**
+## **Tehtävät**
 
-####**Viikko 1**
+#### **Viikko 1**
 
-[komentorivi.txt](https://github.com/ttoivonen/ot-harjoitustyo/blob/master/laskarit/komentorivi.tx)t
+[komentorivi.txt](https://github.com/ttoivonen/ot-harjoitustyo/blob/master/laskarit/komentorivi.txt)
