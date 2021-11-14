@@ -28,9 +28,10 @@ The application can be utilized to document the expected project tasks and neede
   - A Project Phase is assigned to a Project
   - A Project Phase consists of one or multiple Tasks
 - User is able to create a Task
-  - A Task is an object associated to activities needed in a Project Phase
+  - A Task is an object associated to activity needed in a Project Phase
   - A Task has description, a Team Member performing the Task and estimated hours to complete it
 - User is able to assign a Task to a Project Phase
+- User is able to delete a Project Phase or Task
 - User is able to generate a Project overview with estimated hours and costs
   - The overview shows total estimated hours and price of the Project
   - The overview shows to the estimated profitability of the project ((total hours x flat rate) – (total hours x team member specific hourly rate))
