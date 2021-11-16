@@ -1,0 +1,42 @@
+a) pip ei toiminut Ubuntussa ja yritimme sitä korjata ohjaajan kanssa. Sain poetryn toimimaan kuitenkin WIN komentorivillä
+b) pytest asennus onnistu, kts alla (1)
+c) kohdasta b johtuen en pysty ajamaan testejä
+
+
+(1)
+C:\Users\tamto\Documents\Opiskelu\ot-harjoitustyo\laskarit\viikko2\maksukortti>poetry add pytest --dev
+Creating virtualenv maksukortti-2hKcW2qo-py3.10 in C:\Users\tamto\AppData\Local\pypoetry\Cache\virtualenvs
+Using version ^6.2.5 for pytest
+
+Updating dependencies
+Resolving dependencies...
+
+Writing lock file
+
+Package operations: 10 installs, 0 updates, 0 removals
+
+  • Installing pyparsing (2.4.7)
+
+  ValueError
+
+  File \C:\Users\tamto\AppData\Local\pypoetry\Cache\artifacts\99\c8\f8\0954d73c6d7d441bc4ed58326f3f13cdc63bfedf6e46e0d16eddd10c58\pyparsing-2.4.7-py2.py3-none-any.whl does not exist
+
+  at ~\.poetry\lib\poetry\_vendor\py3.10\poetry\core\packages\file_dependency.py:40 in __init__
+       36│             except FileNotFoundError:
+       37│                 raise ValueError("Directory {} does not exist".format(self._path))
+       38│
+       39│         if not self._full_path.exists():
+    →  40│             raise ValueError("File {} does not exist".format(self._path))
+       41│
+       42│         if self._full_path.is_dir():
+       43│             raise ValueError("{} is a directory, expected a file".format(self._path))
+       44│
+
+
+Failed to add packages, reverting the pyproject.toml file to its original content.
+
+
+(2)
+C:\Users\tamto\Documents\Opiskelu\ot-harjoitustyo\laskarit\viikko2\maksukortti\src>pytest src
+'pytest' is not recognized as an internal or external command,
+operable program or batch file.
