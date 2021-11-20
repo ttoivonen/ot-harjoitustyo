@@ -63,4 +63,5 @@ class TestKassapaate(unittest.TestCase):
         kassa.syo_maukkaasti_kortilla(kortti)
         self.assertEqual(kassa.maukkaat, 0)  
 
+
 # tuli keskiyö ja deadline :)
