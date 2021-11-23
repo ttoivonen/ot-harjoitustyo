@@ -1,6 +1,7 @@
 from project import Project
 from app_logic import AppLogic
 
+#the code covers creating a project and any number of team members to the project
 application = AppLogic()
 print("Create a new project")
 project = application.create_project()
@@ -12,7 +13,8 @@ while True:
         break
     elif command == "1":
         team_member = application.create_team_member()
-        project.add_team_member(team_member)
+        project.team_members.append(team_member)
 
+#test code to ensure team members are saved to project object
 for i in project.team_members:
     print(i)
