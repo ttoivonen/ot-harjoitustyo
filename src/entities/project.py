@@ -1,5 +1,6 @@
-from team_member import TeamMember
-from project_phase import Phase
+from entities.team_member import TeamMember
+from entities.project_phase import Phase
+from entities.phase_task import Task
 
 class Project:
 
@@ -23,3 +24,6 @@ class Project:
     #adds/assigns a project phase to a project
     def add_project_phase(self, project_phase: Phase):
         self.project_phases.append(project_phase)
+
+    def __str__(self):
+        return f"{self.project_name} for customer {self.customer} with objective of {self.description}"

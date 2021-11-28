@@ -10,7 +10,7 @@ def coverage_report(ctx):
 
 @task
 def start(ctx):
-    ctx.run("python src/ui.py")
+    ctx.run("python src/main.py")
 
 @task
 def test(ctx):
