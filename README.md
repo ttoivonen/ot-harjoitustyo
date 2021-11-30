@@ -17,6 +17,7 @@ Kuvaus tulossa, kts. sillä välin vaatimusmäärittely.
 
 
 ### **Komentorivitoiminnot**
+**HUOM: sovelluksen poetryssä ongelmia tällä hetkellä (päivitetty 30.11.2021)**
 
 #### **Ohjelman suorittaminen**
 Ohjelman voi suorittaa komennolla: poetry run invoke start
