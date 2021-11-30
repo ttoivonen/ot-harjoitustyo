@@ -2,12 +2,14 @@
 
 ## **Project estimating application**
 
-Kuvaus tulossa.
+Kuvaus tulossa, kts. sillä välin vaatimusmäärittely.
 
 ### **Dokumentaatio**
 
 [Vaatimusmäärittely](https://github.com/ttoivonen/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
+
 [Arkkitehtuuri](https://github.com/ttoivonen/ot-harjoitustyo/blob/master/dokumentaatio/arkkitehtuuri.md)
+
 [Tuntikirjanpito](https://github.com/ttoivonen/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
 
