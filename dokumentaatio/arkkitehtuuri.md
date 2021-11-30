@@ -9,6 +9,7 @@ Alla on kuvattuna ohjelman luokka- ja pakkauskaavio.
 
 ### **Sovelluslogiikka**
 
+![Kuvaus sovelluslogiikasta](/dokumentaatio/kuvat/sovelluslogiikka.png)
 Ohjelman logiikka perustuu luokkiin, jotka kuvaavat projektin (Project) rakennetta projektisuunnitelman tasolla:
 - projektilla on tiimijäseniä (TeamMember)
 - projekti koostuu useista vaiheista (Phase)
