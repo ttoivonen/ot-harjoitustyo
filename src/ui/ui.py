@@ -1,4 +1,4 @@
-from services import project_service
+
 from services.project_service import ProjectService
 
 class ProjectManagement:
@@ -29,7 +29,8 @@ class ProjectManagement:
                 self.create_task_to_phase()
 
     def define_project(self):
-        hard_coded_test_inputs = True
+        #hard coded test inputs to save some time in building and testing
+        hard_coded_test_inputs = False
         if hard_coded_test_inputs:
             project_name = "ERP implementation"
             customer_name = "Company Oy"
