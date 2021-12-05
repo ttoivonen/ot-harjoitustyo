@@ -28,7 +28,6 @@ class ProjectService:
 
     def print_team_members(self):
         if len(self.active_project.team_members) == 0:
-            
             return False
         else:
             for i in range(0, len(self.active_project.team_members)):
@@ -47,10 +46,38 @@ class ProjectService:
             return True
 
     def create_task(self, phase_index: int, task_description: str, estimated_hr: int, tm_index: int):
-        self.active_project.project_phases[phase_index - 1].add_task((Task(task_description, estimated_hr, self.active_project.team_members[tm_index - 1])))
+        self.active_project.project_phases[phase_index - 1].phase_tasks.append((Task(task_description, estimated_hr, self.active_project.team_members[tm_index - 1])))
         print("A task successfully assigned to project phase")
 
     def print_tasks(self):
-        for i in self.active_project.project_phases:
-            for a in i.phase_tasks:
-                print(a)
+        if len(self.active_project.project_phases) == 0:
+            return False
+        for phase in self.active_project.project_phases:
+            if len(phase.phase_tasks) == 0:
+                print(f"Phase {phase.description} has no tasks")
+            else:
+                for task in phase.phase_tasks:
+                    print(f"{task}; customer cost EUR {self.active_project.flat_hour_rate * task.estimated_hours}; internal cost EUR {task.task_estimated_int_cost()} (Phase {phase.description})")
+
+    def print_project_estimate_phase(self):
+        if len(self.active_project.project_phases) == 0:
+            print("No project phases or tasks created.")
+            return
+        phase_prnt = "Phase"
+        prnt_hours = "Estimated hours"
+        prnt_ext_costs = "Customer costs"
+        prnt_int_costs = "Internal costs"
+        prnt_profitability = "Profitability"
+        total_prnt = "TOTAL"
+        total_hrs = 0
+        total_ext_costs = 0
+        total_int_costs = 0
+        total_profitability = 0
+        print(f"{phase_prnt:<15}{prnt_hours:<20}{prnt_ext_costs:<20}{prnt_int_costs:<20}{prnt_profitability:<20}")
+        for phase in self.active_project.project_phases:
+            print(f"{phase.description:<15}{phase.phase_hours():<20}{phase.phase_hours() * self.active_project.flat_hour_rate:<20}{phase.phase_int_costs():<20}{(phase.phase_hours() * self.active_project.flat_hour_rate) - phase.phase_int_costs():<20}")
+            total_hrs += phase.phase_hours()
+            total_ext_costs += phase.phase_hours() * self.active_project.flat_hour_rate
+            total_int_costs += phase.phase_int_costs()
+            total_profitability += (phase.phase_hours() * self.active_project.flat_hour_rate) - phase.phase_int_costs()
+        print(f"{total_prnt:<15}{total_hrs:<20}{total_ext_costs:<20}{total_int_costs:<20}{total_profitability:<20}")

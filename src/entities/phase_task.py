@@ -9,5 +9,12 @@ class Task:
         #a team member who performs the task
         self.team_member = team_member
 
+    def task_estimated_int_cost(self):
+        return int(self.team_member.int_hour_rate) * self.estimated_hours
+    
+    def estimated_hours(self):
+        return self.estimated_hours
+
+
     def __str__(self):
-        return f"{self.task_description} estimated hours {self.estimated_hours}, team member {self.team_member.name} is performing the task"
+        return f"{self.task_description} with estimated hours {self.estimated_hours} for team member {self.team_member.name}"

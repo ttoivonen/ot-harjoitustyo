@@ -18,12 +18,6 @@ class Project:
         #project's phases in a list
         self.project_phases = []
 
-    #adds a team member to a team of a project
-    def add_team_member(self, team_member: TeamMember):
-        self.team_members.append(team_member)
-    #adds/assigns a project phase to a project
-    def add_project_phase(self, project_phase: Phase):
-        self.project_phases.append(project_phase)
 
     def __str__(self):
         return f"{self.project_name} for customer {self.customer} with objective of {self.description}"
