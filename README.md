@@ -1,10 +1,9 @@
-# **Ohjelmistotekniikka, harjoitustyö**
 
-## **Project estimating application**
+# **Project estimating application**
 
 Kuvaus tulossa, kts. sillä välin vaatimusmäärittely.
 
-### **Dokumentaatio**
+## **Dokumentaatio**
 
 [Vaatimusmäärittely](https://github.com/ttoivonen/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
 
@@ -13,17 +12,22 @@ Kuvaus tulossa, kts. sillä välin vaatimusmäärittely.
 [Tuntikirjanpito](https://github.com/ttoivonen/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
 
-### **Asennus**
+## **Asennus**
 
+1. Asenna riippuvuudet komennolla ```poetry install```
+2. Käynnistä ohjelma komennolla ```poetry run invoke start```
 
-### **Komentorivitoiminnot**
-**HUOM: sovelluksen poetryssä ongelmia tällä hetkellä (päivitetty 30.11.2021)**
+## **Komentorivitoiminnot**
+
 
 #### **Ohjelman suorittaminen**
-Ohjelman voi suorittaa komennolla: poetry run invoke start
+Ohjelma suoritetaan komennolla:  ```poetry run invoke start```
 
 #### **Testaus**
-Testit suoritetaan komennolla: poetry run invoke test
+Testit suoritetaan komennolla: ```poetry run invoke test```
 
 #### **Testikattavuus**
-Testikattavuusraportin voi ajaa komennolla: poetry run invoke coverage-report
+Testikattavuusraportti ajetaan komennolla: ```poetry run invoke coverage-report```
+
+#### **Pylint**
+Tiedostossa [.pylintrc](https://github.com/ttoivonen/ot-harjoitustyo/blob/master/.pylintrc) määritellyt koodin laatutarkastukset suoritetaan komennolla: ```poetry run invoke lint```
