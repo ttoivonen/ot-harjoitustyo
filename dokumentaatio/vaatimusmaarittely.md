@@ -20,23 +20,23 @@ The application can be utilized to document the expected project tasks and neede
 
 ### **Functionalities and capabilities**
 
-- User is able to create a Project [DONE - week 3]
+- User is able to create a Project [**DONE - week 3**]
   - The Project has a name, customer name, description, flat hourly rate and Team Members and list of project-relevant keywords
-- User is able to create Team Members and assign the Team Members to a Project [DONE - week 4]
+- User is able to create Team Members and assign the Team Members to a Project [**DONE - week 4**]
   - Each project team member has a name, role, list of keywords on skills and Team Member specific internal hourly rate (which represents cost of the team member for the service provider firm)
-- User is able to create Project Phases [DONE - week 3]
+- User is able to create Project Phases [**DONE - week 3**]
   - A Project Phase is assigned to a Project
   - A Project Phase consists of one or multiple Tasks
-- User is able to create Tasks [DONE week 3]
+- User is able to create Tasks [**DONE week 3**]
   - A Task is an object associated to activity needed in a Project Phase
   - A Task has description, a Team Member performing the Task and estimated hours to complete it
-- User is able to assign a Task to a Project Phase [DONE week 4]
-- User is able to view created/existing team members, phases and tasks (new feature - week 4) [DONE - week 5]
-- User is able switch between two menus: (1) activity menu to create and modify the project components; (2) display menu to generate views (e.g. created phases, estimates) (new feature - week 4) [DONE week 5]
+- User is able to assign a Task to a Project Phase [**DONE week 4**]
+- User is able to view created/existing team members, phases and tasks (new feature - week 4) [**DONE - week 5**]
+- User is able switch between two menus: (1) activity menu to create and modify the project components; (2) display menu to generate views (e.g. created phases, estimates) (new feature - week 4) [**DONE week 5**]
 - User is able to delete a Project Phase or Task
 - User is able to generate a Project a display view on estimated hours and financial info (estimated customer costs and profitability for the service provider)
   - One view shows total estimated hours and price of the Project
-  - One view shows estimated hours, customer costs, internal costs and profitability on project phase level (new feature - week 4) [DONE week 5]
+  - One view shows estimated hours, customer costs, internal costs and profitability on project phase level (new feature - week 4) [**DONE week 5**]
   - One view shows to the estimated profitability of the project ((total hours x flat rate) – (total hours x team member specific hourly rate))
   - One view shows more detailed hour and cost estimate per Project Phase and percentage of Total price/hours
 - User is able to export the project with its components to a file (new feature - week 5)
