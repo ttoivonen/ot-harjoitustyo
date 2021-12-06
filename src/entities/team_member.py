@@ -6,11 +6,12 @@ class TeamMember:
         self.name = name
         #role of a team member, e.g. project manager, subject matter expert, business analyst
         self.role = role
-        #internal hourly rate, that is a targeted hourly rate for a team member to cover the payroll costs of the team member
+        #internal hourly rate, that is a targeted hourly rate for a team member to 
+        # cover the payroll costs of the team member
         self.int_hour_rate = int_hour_rate
-        #list of skills that a team member has, e.g. Python, Java, logistics, accounting, change management
+        #list of skills that a team member has, e.g. Python, Java, logistics, accounting
         self.skills_keywords = []
-    
+
     def __str__(self):
         if len(self.skills_keywords) == 0:
             skills_prnt = "no listed skills, "

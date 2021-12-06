@@ -1,6 +1,3 @@
-from entities.team_member import TeamMember
-from entities.project_phase import Phase
-from entities.phase_task import Task
 
 class Project:
 
@@ -11,7 +8,8 @@ class Project:
         self.customer = customer
         #a short description of what a project is about, the objective
         self.description = description
-        #a fixed and flat hourly EUR rate based on which a customer is invoiced and fees are incurred
+        #a fixed and flat hourly EUR rate based on which a customer is invoiced and 
+        # fees are incurred
         self.flat_hour_rate = flat_hour_rate
         #team members working in a project
         self.team_members = []

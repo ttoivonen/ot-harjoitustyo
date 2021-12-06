@@ -1,8 +1,6 @@
-from entities.phase_task import Task
-
 
 class Phase:
-    
+
     def __init__(self, description: str):
         #description of the project phase content, e.g. preparation, discovery, sprint 1
         self.description = description

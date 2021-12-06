@@ -11,7 +11,7 @@ class Task:
 
     def task_estimated_int_cost(self):
         return int(self.team_member.int_hour_rate) * self.estimated_hours
-    
+
     def estimated_hours(self):
         return self.estimated_hours
 
