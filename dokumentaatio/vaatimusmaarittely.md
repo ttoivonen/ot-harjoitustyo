@@ -20,14 +20,14 @@ The application can be utilized to document the expected project tasks and neede
 
 ### **Functionalities and capabilities**
 
-- User is able to create a Project [DONE - week 4]
+- User is able to create a Project [DONE - week 3]
   - The Project has a name, customer name, description, flat hourly rate and Team Members and list of project-relevant keywords
 - User is able to create Team Members and assign the Team Members to a Project [DONE - week 4]
   - Each project team member has a name, role, list of keywords on skills and Team Member specific internal hourly rate (which represents cost of the team member for the service provider firm)
-- User is able to create Project Phases [DONE - week 4]
+- User is able to create Project Phases [DONE - week 3]
   - A Project Phase is assigned to a Project
   - A Project Phase consists of one or multiple Tasks
-- User is able to create a Task [DONE week 4]
+- User is able to create Tasks [DONE week 3]
   - A Task is an object associated to activity needed in a Project Phase
   - A Task has description, a Team Member performing the Task and estimated hours to complete it
 - User is able to assign a Task to a Project Phase [DONE week 4]
