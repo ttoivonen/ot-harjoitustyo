@@ -7,6 +7,8 @@ Sovelluksen pääkomponentti on projekti (luokka Project). Projektille luodaan y
 
 Kun käyttäjä on luonnut projektin sovelluksessa, pystyy käyttäjä generoimaan eri näkymiä, jotka sisältävät tietoa projektin rakenteesta, arvioidusta kustannuksesta, arvioiduista tuntimääristä ja arvioidusta kannattavuudesta.
 
+Sovellus on kirjoitettu Pythonilla ja sen riippuvuudeksi on määritelty Python-versio 3.8 tai korkeampi.
+
 ## **Dokumentaatio**
 
 [Vaatimusmäärittely](https://github.com/ttoivonen/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
