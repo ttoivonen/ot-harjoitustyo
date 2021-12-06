@@ -21,3 +21,12 @@ Kun sovelluksella on määritelty projektin eri vaiheet ja vaiheiden eri tehtäv
 - kuinka monta tuntia projektin tekeminen vie (tiimijäsenten eri vaiheiden tehtävien suorittamiseen arvioitu tuntimäärä yhteensä)
 - tiimijäsenten hinta (kustannus) palveluntarjoajalle, eli projektin suorittavalle organisaatiolle (oletuksena, että tiimii kostuu eri kokemuksella ja taidoilla varustetuista tiimijäsenistä, joista taitavimmat ovat kalliimpia palveluntarjoajalle).
 Edellämainittujen tietojen perusteella voidaan laskea projektin arvioitu kustannus asiakkaalle (tunnit yhteensä * projektin kiinteä tuntihinta) ja projektin kannattavuus (projektin hinta asiakkaalle - (tiimijäsenkohtainen tuntihinta x tiimijäsenen tunnit) sekä miten kustannukset jakautuvat vaiheittain. 
+
+
+### **Päätoiminnallisuudet**
+
+#### **Projektin luominen**
+
+Projekti luodaan siten, että käyttöliittymä (ProjectManagement-luokka) pyytää käyttäjää antamaan syötteinä projektin tiedot, kuten esim. nimi ja asiakas. Sen jälkeen käyttöliittymä kutsuu sovelluslogiikkaa (ProjectService-luokka) ja syöttää sovelluslogiikalla luotavan projektin tiedot. Sovelluslogiikka kutsuu sen jälkeen projekin luokkaa (Project-luokka), joka luo "new_project"-olion. Olio asetetaan aktiiviseksi projektiksi sovelluslogiikkaan (sekä tallennetaan listaan, jonka on tarkoitus myöhemmin auttaa sovelluksen laajentamisessa). Sovelluslogiikkaa palauttaa vielä käyttöliittymällä ja käyttäjälle viestin "True" merkiksi, että projektin luominen on onnistunut. Alla on kuvaus projektin luominsen prosessista sekvenssikaavion muodossa.
+
+![Projektin luominen](/dokumentaatio/kuvat/Create_new_project.png)
