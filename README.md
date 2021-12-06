@@ -3,9 +3,9 @@
 
 Sovelluksen tarkoitus on auttaa käyttäjää kasaamaan projektin eri vaiheet ja tehtävät sekä näiden perusteella laskemaan projektiin arvioitu tuntimäärän ja taloudelliset luvut (hinta asiakkaalle ja kannattavuus palveluntarjoajalle). Sovelluksen käyttäjä edustaa palveluntarjoajaa. Sovelluksen käyttötarkoitus on projektin tarjousvaihe, jolloin asiakasneuvotteluissa on tärkeää tietää arvioitu hinta asiakkaalle; taas palveluntarjoajan on hyvä tietää, minkälainen tiimi tarvitaan ja mitä tiimin koostumus tarkoittaa projektin kannattavuudelle (esim. kokeneiden tiimijäsenten kustannus palveluntarjoajalle on korkeampi kuin nuorempien tiimijäsenten).
 
-Sovelluksen pääkomponentti on projekti (luokka Project). Projektille luodaan yksi tai useampi tiimijäsen (luokka TeamMember) Projektille luodaan yksi tai useampi projektivaiheita (luokka Phase). Jokaiseen projektivaiheeseen liitetään yksi tai useampi tehtävä-olioi (luokka Task), johon kiinnitetään tiimijäsen, jonka on tarkoitus suorittaa tehtävä.
+Sovelluksen pääkomponentti on projekti (luokka Project). Projektille luodaan yksi tai useampi tiimijäsen (luokka TeamMember) Projektille luodaan yksi tai useampi projektivaiheita (luokka Phase). Jokaiseen projektivaiheeseen liitetään yksi tai useampi tehtävä-olio (luokka Task), johon kiinnitetään tiimijäsen, jonka on tarkoitus suorittaa tehtävä. Tehtävälle annetaan arvioitu tuntiarvio. Lopulta annetut tehtäväkohtaiset tuntiarvioit, tiimijäsenten sisäiset tuntihinnat sekä projektin kiinteä tuntihinta asiakkaalle muodostavat laskelman.
 
-Projektille annetaan kiinteä tuntihinta, joka on kustannus asiakkaalle.
+Kun käyttäjä on luonnut projektin sovelluksessa, pystyy käyttäjä generoimaan eri näkymiä, jotka sisältävät tietoa projektin rakenteesta, arvioidusta kustannuksesta, arvioiduista tuntimääristä ja arvioidusta kannattavuudesta.
 
 ## **Dokumentaatio**
 
