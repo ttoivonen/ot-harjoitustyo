@@ -1,6 +1,6 @@
 # **Requirements definition**
 
-## **_Project: Project effort and cost estimate application_**
+## **_Project effort and cost estimate application_**
 
 
 ### **Purpose of the application**
