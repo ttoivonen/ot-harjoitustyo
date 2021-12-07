@@ -12,5 +12,6 @@
 |4.12.2021 |3,5              |Ohjelman generoimien näyttöjen/raporttien rakentaminen |
 |5.12.2021 |4              |Ohjelman generoimien näyttöjen/raporttien rakentaminen, testien edistäminen |
 |6.12.2021 |4,5              |pylint-palauttaan perusteella koodin laadun parannukset, projektin kuvauksen tekeminen ja sekvenssikaavion lisäys arkkitehtuuriin |
+|7.12.2021 |1,5              |uuden raporttinäkymän ja metodien lisäys sekä testien lisääminen ja GitHub release |
 
-Yhteensä 37,5 tuntia (per 7.12.2021)
+Yhteensä 39 tuntia (per 7.12.2021)
