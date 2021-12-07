@@ -16,6 +16,25 @@ class Project:
         #project's phases in a list
         self.project_phases = []
 
+    def calculate_total_hours(self):
+        total_hours = 0
+        for phase in self.project_phases:
+            total_hours += phase.phase_hours()
+        return total_hours
+
+    def calculate_total_ext_costs(self):
+        total_ext_costs = self.calculate_total_hours() * self.flat_hour_rate
+        return total_ext_costs
+
+    def calculate_total_int_costs(self):
+        total_int_costs = 0
+        for phase in self.project_phases:
+            total_int_costs += phase.phase_int_costs()
+        return total_int_costs
+
+    def calculate_total_profitability(self):
+        profitability = self.calculate_total_ext_costs() - self.calculate_total_int_costs()
+        return profitability
 
     def __str__(self):
         return f"{self.project_name} for customer {self.customer} with objective of {self.description}"

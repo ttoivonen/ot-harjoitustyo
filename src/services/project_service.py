@@ -66,6 +66,17 @@ class ProjectService:
                     print(f"{task}; customer cost EUR {customer_costs};",
                      f"internal cost EUR {int_cost} (Phase {phase.description})")
 
+
+    def print_project_estimates_total(self):
+        if len(self.active_project.project_phases) == 0:
+            return False     
+        print(self.active_project)
+        print(f"Total estimated hours: {self.active_project.calculate_total_hours()}")
+        print(f"Total estimated customer costs: EUR {self.active_project.calculate_total_ext_costs()}")
+        print(f"Total internal costs: EUR {self.active_project.calculate_total_int_costs()}")
+        print(f"Total profitability: EUR {self.active_project.calculate_total_profitability()}")
+
+
     def print_project_estimate_phase(self):
         if len(self.active_project.project_phases) == 0:
             print("No project phases or tasks created.")
