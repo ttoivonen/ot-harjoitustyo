@@ -9,6 +9,10 @@ Kun käyttäjä on luonnut projektin sovelluksessa, pystyy käyttäjä generoima
 
 Sovellus on kirjoitettu Pythonilla ja sen riippuvuudeksi on määritelty Python-versio 3.8 tai korkeampi.
 
+## **Julkaisut**
+
+[Release 1 (2021-12-07)](https://github.com/ttoivonen/ot-harjoitustyo/releases/tag/viikko5)
+
 ## **Dokumentaatio**
 
 [Vaatimusmäärittely](https://github.com/ttoivonen/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
