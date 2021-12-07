@@ -9,13 +9,17 @@ class ProjectManagement:
 
     def start(self):
         if len(self.service.projects) == 0:
-
+            #first mandatory step is to create a project
             print("Start by creating a new project")
             self.define_project()
         else:
-            #to be added option to create several projects and to change active project among created/existing projects for modification or deletion
+            #to be added option to create several projects and to change active
+            # project among created/existing projects for modification or deletion
             pass
         while True:
+            #after project is created, you can create team members, phases and tasks
+            #remember: a phase is mandatory to create a task
+            # and a team member is mandatory for a task
             self.print_main_command_options()
             command = input("Select activity: ")
             if command == "x":
@@ -53,7 +57,7 @@ class ProjectManagement:
 
     def define_project(self):
         #hard coded test inputs to save some time in building and testing
-        hard_coded_test_inputs = True
+        hard_coded_test_inputs = False
         if hard_coded_test_inputs:
             project_name = "ERP implementation"
             customer_name = "Company Oy"
