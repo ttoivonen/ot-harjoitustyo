@@ -25,6 +25,14 @@ class TestProject(unittest.TestCase):
         total_ext_costs_test = self.test_project.calculate_total_ext_costs()
         self.assertEqual(total_ext_costs_test, 1000)
 
+    def test_calculate_total_int_costs(self):
+        total_int_costs_test = self.test_project.calculate_total_int_costs()
+        self.assertEqual(total_int_costs_test, 200)
+
+    def test_calculate_total_profitability(self):
+        profitability_test = self.test_project.calculate_total_profitability()
+        self.assertEqual(profitability_test, 800)
+
 
 if __name__ == '__main__':
     

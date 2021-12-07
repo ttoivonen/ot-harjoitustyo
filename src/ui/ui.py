@@ -12,14 +12,16 @@ class ProjectManagement:
             #first mandatory step is to create a project
             print("Start by creating a new project")
             self.define_project()
+            #after project is created, you can create team members, phases and tasks
+            #remember: a phase is mandatory to create a task
+            # and a team member is mandatory for a task
         else:
             #to be added option to create several projects and to change active
             # project among created/existing projects for modification or deletion
             pass
         while True:
-            #after project is created, you can create team members, phases and tasks
-            #remember: a phase is mandatory to create a task
-            # and a team member is mandatory for a task
+            #this is the main menu where user can choose activities
+            #command 4 will move user to display view menu
             self.print_main_command_options()
             command = input("Select activity: ")
             if command == "x":
@@ -32,6 +34,7 @@ class ProjectManagement:
                 self.create_task_to_phase()
             elif command == "4":
                 while True:
+                    #display options are below
                     self.print_display_command_options()
                     display_command = input("Select to display: ")
                     if display_command == "x":
@@ -94,7 +97,6 @@ class ProjectManagement:
                 tm_skills_kw.append(tm_skill)
         if self.service.create_team_member(tm_name, tm_role, tm_int_rate, tm_skills_kw) == True:
             print(f"Team member {tm_name} successfully created to project {self.service.active_project.project_name}")
-        #print(f"Team member {tm_name} successfully created to project {self.active_project.project_name}")
 
     def create_project_phase(self):
         ph_description = input("A description of the phase: ")
