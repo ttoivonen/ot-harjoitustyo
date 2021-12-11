@@ -33,7 +33,7 @@ The application can be utilized to document the expected project tasks and neede
 - User is able to assign a Task to a Project Phase [**DONE week 4**]
 - User is able to view created/existing team members, phases and tasks (new feature - week 4) [**DONE - week 5**]
 - User is able switch between two menus: (1) activity menu to create and modify the project components; (2) display menu to generate views (e.g. created phases, estimates) (new feature - week 4) [**DONE week 5**]
-- User is able to delete a Project Phase or Task
+- User is able to delete a Project Phase or Task [**DONE week 6**]
 - User is able to generate a Project a display view on estimated hours and financial info (estimated customer costs and profitability for the service provider)
   - One view shows total estimated hours and price of the Project [**DONE - week 5**]
   - One view shows estimated hours, customer costs, internal costs and profitability on project phase level (new feature - week 4) [**DONE week 5**]
