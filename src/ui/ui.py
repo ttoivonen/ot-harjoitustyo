@@ -11,7 +11,7 @@ class ProjectManagement:
         if len(self.service.projects) == 0:
             #first mandatory step is to create a project
             print("Start by creating a new project")
-            self.define_project()
+            self.define_project_activity()
             #after project is created, you can create team members, phases and tasks
             #remember: a phase is mandatory to create a task
             # and a team member is mandatory for a task
@@ -27,12 +27,16 @@ class ProjectManagement:
             if command == "x":
                 break
             elif command == "1":     
-                self.create_team_member()
+                self.create_team_member_activity()
             elif command == "2":
-                self.create_project_phase()
+                self.create_project_phase_activity()
             elif command == "3":
-                self.create_task_to_phase()
+                self.create_task_to_phase_activity()
             elif command == "4":
+                self.delete_phase_activity()
+            elif command == "5":
+                self.delete_task_activity()
+            elif command == "6":
                 while True:
                     #display options are below
                     self.print_display_command_options()
@@ -58,9 +62,9 @@ class ProjectManagement:
             else:
                 print("Unknown command")
 
-    def define_project(self):
+    def define_project_activity(self):
         #hard coded test inputs to save some time in building and testing
-        hard_coded_test_inputs = False
+        hard_coded_test_inputs = True
         if hard_coded_test_inputs:
             project_name = "ERP implementation"
             customer_name = "Company Oy"
@@ -79,7 +83,7 @@ class ProjectManagement:
         if self.service.create_project(project_name, customer_name, project_description, hourly_rate) == True:
             print(f"Project {project_name} created successfully.")
     
-    def create_team_member(self):
+    def create_team_member_activity(self):
         tm_name = input("Team member name: ")
         tm_role = input("Role: ")
         while True:
@@ -98,11 +102,11 @@ class ProjectManagement:
         if self.service.create_team_member(tm_name, tm_role, tm_int_rate, tm_skills_kw) == True:
             print(f"Team member {tm_name} successfully created to project {self.service.active_project.project_name}")
 
-    def create_project_phase(self):
+    def create_project_phase_activity(self):
         ph_description = input("A description of the phase: ")
         self.service.create_project_phase(ph_description)
 
-    def create_task_to_phase(self):
+    def create_task_to_phase_activity(self):
         if self.service.print_phases() == False:
             print("No available project phases, create a project phase to assign task(s) to it")
         else:
@@ -119,10 +123,37 @@ class ProjectManagement:
                 except ValueError:
                     print("Incorrect value. Estimated hours must be a number value (integer).")
             self.service.create_task(select_phase, task_description, estimated_hr, tm_for_task)
+    
+    def delete_phase_activity(self):
+        if self.service.print_phases() == False:
+            print("No existing phases for the project to be deleted")
+        while True:
+            try:
+                delete_index = int(input("Select the phase to be deleted (integer number): "))
+                if self.service.delete_phase(delete_index) == False:
+                    print("Incorrect value. No project existing for the selected value.")
+                break
+            except ValueError:
+                print("Incorrect value. Selection must be a number value (integer).")
+
+    def delete_task_activity(self):
+        if self.service.print_tasks() == False:
+            print("No tasks to be deleted due non-existing project phases")
+        while True:
+            try:
+                delete_number = input("Select the task to be deleted (in format [phase].[task], e.g. 1.2): ")
+                delete_number_parts = delete_number.split(".")
+                delete_phase_index = int(delete_number_parts[0])
+                delete_task_index = int(delete_number_parts[1])
+                if self.service.delete_task(delete_phase_index, delete_task_index) == False:
+                    print("Incorrect value. No task existing for the selected value.")
+                break
+            except ValueError:
+                print("Incorrect value. Selection must be in a format [phase].[task], e.g. 1.2.")
         
     def print_main_command_options(self):
         commands_main = {"1": "add team members to the project team", "2": "create a project phase",
-        "3": "add a task to a project phase", "4": "show display options", "x": "exit"}
+        "3": "add a task to a project phase", "4": "delete a project phase", "5": "delete a task from a phase", "6": "show display options", "x": "exit"}
         print("Select action")
         for command_key, command_value in commands_main.items():
             print(f"{command_key} {command_value}")

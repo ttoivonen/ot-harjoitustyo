@@ -27,6 +27,20 @@ class ProjectService:
         self.active_project.team_members.append(new_team_member)
         return True
 
+    def delete_phase(self, phase_index: int):
+        try:
+            deleted = self.active_project.project_phases.pop(phase_index - 1)
+            print(f"Project phase {deleted.description} successfully deleted")
+        except IndexError:
+            return False
+
+    def delete_task(self, phase_index: int, task_index):
+        try:
+            delete = self.active_project.project_phases[phase_index - 1].phase_tasks.pop(task_index - 1)
+            phase_name = self.active_project.project_phases[phase_index - 1].description
+            print(f"Task {delete.task_description} successfully deleted from phase {phase_name}")
+        except IndexError:
+            return False
 
     def print_team_members(self):
         if len(self.active_project.team_members) == 0:
@@ -56,15 +70,19 @@ class ProjectService:
     def print_tasks(self):
         if len(self.active_project.project_phases) == 0:
             return False
+        phase_index = 1
         for phase in self.active_project.project_phases:
             if len(phase.phase_tasks) == 0:
                 print(f"Phase {phase.description} has no tasks")
             else:
+                print(f"{phase_index} {phase.description}")
+                task_index = 1
                 for task in phase.phase_tasks:
-                    customer_costs = self.active_project.flat_hour_rate * task.estimated_hours
-                    int_cost = task.task_estimated_int_cost()
-                    print(f"{task}; customer cost EUR {customer_costs};",
-                     f"internal cost EUR {int_cost} (Phase {phase.description})")
+                    task_tm_name = task.team_member.name
+                    task_hours = task.estimated_hours
+                    print(f"  {phase_index}.{task_index}: {task.task_description}; team member {task_tm_name}; estimated hours {task_hours}")
+                    task_index += 1
+            phase_index += 1
 
 
     def print_project_estimates_total(self):
