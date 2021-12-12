@@ -56,7 +56,7 @@ Valitse aktiviteettivalikosta numero 3 syötteellä "3" ja paina enter. Valitse 
 ![Luo tehtävä](/dokumentaatio/kuvat/ko_luo_tehtava.PNG)
 
 
-#### **Näkymiin siirtyminen**
+#### **Näkymävalikko ja näkymien generointi**
 
 Kun ohjelmassa on määritelty vähintään yksi tiimijäsen, yksi projektivaihe ja yksi tehtävä, on mahdollista alkaa generoimaan eri näkymiä projektin rakenteesta sekä tunneista ja kustannuksista. Pääset siirtymään näkymien valikkoon syötteellä "6" aktiviteettivalikosta ja painamalla enter. Näkymävalikko ilmestyy.
 
