@@ -34,7 +34,7 @@ class ProjectService:
         except IndexError:
             return False
 
-    def delete_task(self, phase_index: int, task_index):
+    def delete_task(self, phase_index: int, task_index):    
         try:
             delete = self.active_project.project_phases[phase_index - 1].phase_tasks.pop(task_index - 1)
             phase_name = self.active_project.project_phases[phase_index - 1].description
@@ -48,10 +48,11 @@ class ProjectService:
 
         for i in range(0, len(self.active_project.team_members)):
             print(f"{i + 1}: {self.active_project.team_members[i]}")
+        return True
 
     def create_project_phase(self, ph_desription: str):
         self.active_project.project_phases.append(Phase(ph_desription))
-        print(f"Project phase {ph_desription} successfully created to project {self.active_project.project_name}")
+        return True
 
     def print_phases(self):
         if len(self.active_project.project_phases) == 0:
@@ -79,7 +80,7 @@ class ProjectService:
                 task_index = 1
                 for task in phase.phase_tasks:
                     task_tm_name = task.team_member.name
-                    task_hours = task.estimated_hours
+                    task_hours = task.task_estimated_hours()
                     print(f"  {phase_index}.{task_index}: {task.task_description}; team member {task_tm_name}; estimated hours {task_hours}")
                     task_index += 1
             phase_index += 1

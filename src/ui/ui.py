@@ -104,7 +104,8 @@ class ProjectManagement:
 
     def create_project_phase_activity(self):
         ph_description = input("A description of the phase: ")
-        self.service.create_project_phase(ph_description)
+        if self.service.create_project_phase(ph_description) == True:
+            print(f"Project phase {ph_description} successfully created to project {self.service.active_project.project_name}")
 
     def create_task_to_phase_activity(self):
         if self.service.print_phases() == False:
@@ -154,13 +155,13 @@ class ProjectManagement:
     def print_main_command_options(self):
         commands_main = {"1": "add team members to the project team", "2": "create a project phase",
         "3": "add a task to a project phase", "4": "delete a project phase", "5": "delete a task from a phase", "6": "show display options", "x": "exit"}
-        print("Select action")
+        print("\nSelect action")
         for command_key, command_value in commands_main.items():
             print(f"{command_key} {command_value}")
 
     def print_display_command_options(self):
         commands_display = {"1": "display team members", "2": "display project phases", "3": "display tasks",
         "4": "display project estimates on phase level", "5": "display total estimates of the project", "x": "return"}
-        print("Select display view")
+        print("\nSelect display view")
         for command_key, command_value in commands_display.items():
             print(f"{command_key} {command_value}")
