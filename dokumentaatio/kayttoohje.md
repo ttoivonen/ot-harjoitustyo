@@ -2,11 +2,6 @@
 
 Hae ohjelman [viimeisin release](https://github.com/ttoivonen/ot-harjoitustyo/releases) lataamalla lähdekoodi Assets-osiosta (_Source code_).
 
-## **Ohjelman käynnistäminen**
-
-1. Asenna riippuvuudet komennolla ```poetry install```
-2. Käynnistä ohjelma komennolla ```poetry run invoke start```
-
 ## **Projektin konseptuaalinen kuvaus**
 
 Alla on kuvattu projektin rakenne konseptuaalisesti. Kuvaus voi auttaa hahmottamaan ohjelman toimintaa. Tärkeää on huomata, että ohjelman neljä komponenttia ovat:
@@ -20,6 +15,13 @@ Alla on kuvattu projektin rakenne konseptuaalisesti. Kuvaus voi auttaa hahmottam
 Projektin rakenteessa ja hierarkiassa projekti (Project) on ylin. Seuraavaksi on vaihe (Phase), ja alimpana tehtävä (Task). Projektilla on vaiheita, joissa taas on tehtäviä. Projektille luotuja tiimijäseniä liitetään tehtäviin.
 
 Projektilla on yksi kiinteä tuntihinta (projektin asiakkaalle). Tiimijäsenillä on oma sisäinen kustannus (internal cost). Tehtäviin taas asetetaan arvioitu aika tehtävän suorittamiseen. Nämä määreet annetaan ohjelman suorituksessa ja määrittävät lopulta projektin arvioidun ulkoisen (asiakas-)kustannuksen, sisäisen kustannuksen sekä kannattavuuden.
+
+
+## **Ohjelman käynnistäminen**
+
+1. Asenna riippuvuudet komennolla ```poetry install```
+2. Käynnistä ohjelma komennolla ```poetry run invoke start```
+
 
 #### **Projektin luominen**
 
@@ -43,4 +45,12 @@ Syötä seuraavaksi tiimijäsenen tiedot ja paina enter edetäksesi. Taitojen ko
 
 #### **Projektivaiheen luominen**
 
+Valitse aktiviteettivalikosta numero 2 syötteellä "2" ja paina enter. Anna sen jälkeen syötteenä projektivaiheen kuvaus ja paina enter. Ohjelma ilmoittaa, kun projektivaihe on luotu onnistuneesti. Kuvassa esimerkkisyötteet keltaisella.
 
+![Projektivaiheen luonti](/dokumentaatio/kuvat/ko_luo_projektivaihe1.PNG)
+
+#### **Tehtävän luominen**
+
+Valitse aktiviteettivalikosta numero 3 syötteellä "3" ja paina enter. Valitse sen jälkeen, mihin projektivaiheeseen tehtävä asetetaan - valitse projektivaihe numerosyötteenä (kuvassa on vain yksi projektivaihe saatavilla numerolla "1", vaihe "preparation"). Seuraavaksi valitse numerosyötteellä, kuka tiimijäsen suorittaa tehtävän; esimerkissä valitaan tiimijäsen "Aaron" syötteellä "1". Anna sen jälkeen syötteenä tehtävän kuvaus sekä arvio tehtävän tuntimäärästä. Ohjelma ilmoittaa jälleen onnistuneesta luontiprosessista. Kuvassa esimerkkisyötteet ovat keltaisella.
+
+![Luo tehtävä](/dokumentaatio/kuvat/ko_luo_tehtava.PNG)
