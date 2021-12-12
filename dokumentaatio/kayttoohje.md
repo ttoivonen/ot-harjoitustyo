@@ -54,3 +54,23 @@ Valitse aktiviteettivalikosta numero 2 syötteellä "2" ja paina enter. Anna sen
 Valitse aktiviteettivalikosta numero 3 syötteellä "3" ja paina enter. Valitse sen jälkeen, mihin projektivaiheeseen tehtävä asetetaan - valitse projektivaihe numerosyötteenä (kuvassa on vain yksi projektivaihe saatavilla numerolla "1", vaihe "preparation"). Seuraavaksi valitse numerosyötteellä, kuka tiimijäsen suorittaa tehtävän; esimerkissä valitaan tiimijäsen "Aaron" syötteellä "1". Anna sen jälkeen syötteenä tehtävän kuvaus sekä arvio tehtävän tuntimäärästä. Ohjelma ilmoittaa jälleen onnistuneesta luontiprosessista. Kuvassa esimerkkisyötteet ovat keltaisella.
 
 ![Luo tehtävä](/dokumentaatio/kuvat/ko_luo_tehtava.PNG)
+
+
+#### **Näkymiin siirtyminen**
+
+Kun ohjelmassa on määritelty vähintään yksi tiimijäsen, yksi projektivaihe ja yksi tehtävä, on mahdollista alkaa generoimaan eri näkymiä projektin rakenteesta sekä tunneista ja kustannuksista. Pääset siirtymään näkymien valikkoon syötteellä "6" aktiviteettivalikosta ja painamalla enter. Näkymävalikko ilmestyy.
+
+![Näkymät](/dokumentaatio/kuvat/ko_projektinakymat.PNG)
+
+Näkymien valikossa on saatavilla neljä eri vaihtoehtoa, joista voi generoida tiedot.
+1. näytä tiimijäsenet (display team members)
+2. näytä projektivaiheet (display project phases)
+3. näytä tehtävät (display tasks)
+4. näytä projektin arviot vaiheiden mukaan (display project estimates on phase level)
+5. näytä projektin kokonaisarviot (display total estimates of the project)
+
+Näkymät valitaan antamalla syötteeksi näkymän numero, kuten "4" esimerkkikuvassa, jos haluaan nähdä projektin kustannus- ja tuntiarviot projektivaiheiden mukaan. Numeron syöttämisen jälkeen paina enter ja näkymä generoituu.
+
+![Näkymä4](/dokumentaatio/kuvat/ko_nakymat4.PNG)
+
+Pääset siirtymään näkymävalikosta takaisin aktiviteettivalikkoon syötteellä "x" ("return") ja painamalla enter.
