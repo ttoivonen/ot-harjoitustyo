@@ -13,5 +13,7 @@
 |5.12.2021 |4              |Ohjelman generoimien näyttöjen/raporttien rakentaminen, testien edistäminen |
 |6.12.2021 |4,5              |pylint-palauttaan perusteella koodin laadun parannukset, projektin kuvauksen tekeminen ja sekvenssikaavion lisäys arkkitehtuuriin |
 |7.12.2021 |1,5              |uuden raporttinäkymän ja metodien lisäys sekä testien lisääminen ja GitHub release |
+|11.12.2021 |4              |delete Task ja delete Phase metodien tekeminen, testien lisääminen ja koodin hienosäätö |
+|12.12.2021 |5              |testien lisääminen, docstringin tekeminen sekä dokumentaatio |
 
-Yhteensä 39 tuntia (per 7.12.2021)
+Yhteensä 48 tuntia (per 12.12.2021)
