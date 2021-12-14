@@ -12,6 +12,7 @@ Sovellus on kirjoitettu Pythonilla ja sen riippuvuudeksi on määritelty Python-
 ## **Julkaisut**
 
 [Release 1 (2021-12-07)](https://github.com/ttoivonen/ot-harjoitustyo/releases/tag/viikko5)
+[Release 2 (2021-12-14)](https://github.com/ttoivonen/ot-harjoitustyo/releases/tag/viikko6)
 
 ## **Dokumentaatio**
 
