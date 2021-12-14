@@ -6,6 +6,13 @@ Alla on kuvattuna ohjelman luokka- ja pakkauskaavio.
 
 ![..](/dokumentaatio/kuvat/pakkausjaluokkakaavio.png)
 
+### **Käyttöliittymä**
+
+Käyttöliittymästä vastaan ProjectManagement-luokka. Luokka vastaa käyttäjän syötteiden vastaanottamisesta ja niiden toimittamisesta sovelluslogiikan luokkaan ProjectService. Käyttöliittymän kautta käyttäjällä kaksi eri päävalikkoa.
+1. Aktiviteettivalikko, josta voi lisätä tai poistaa projektin tietorakenteita (esim. uuden projektivaiheen luominen)
+2. Näkymävalikko, josta käyttäjä pääsee näkemään tietoja projektista (esim. projektin kustannusarviot projektivaiheittain)
+
+Ohjelma alkaa aktiviteettivalikolla, jonka kautta on mahdollista siirtyä näkymävalikkoon. Näkymävalikosta pääsee siirtymään takaisin aktiviteettivalikkoon.
 
 ### **Sovelluslogiikka**
 
