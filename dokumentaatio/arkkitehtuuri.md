@@ -9,8 +9,13 @@ Alla on kuvattuna ohjelman luokka- ja pakkauskaavio.
 
 ### **Sovelluslogiikka**
 
+Alla on kuvattuna ohjelman sovelluslogiiikka.
+
 ![Kuvaus sovelluslogiikasta](/dokumentaatio/kuvat/sovelluslogiikka.png)
-Ohjelman logiikka perustuu luokkiin, jotka kuvaavat projektin (Project) rakennetta projektisuunnitelman tasolla:
+
+Ohjelman toiminnallisuuksista ja sovelluslogiikasta vastaa ProjectService-luokka, jonka vastuulla on toimenpiteiden järjestäminen siten, että käyttäjä saa muodostettua projektia vastaavan tietomallin alla esiteltävistä kolmesta projektia kuvaavasta luokasta (Phase, Task ja TeamMember). ProjectService vastaa myös tietomallien avulla generoitujen näkymien ("raporttien") muodostamisesta. ProjectServicessä on metodit käyttöliittymästä annettaville käskyille.
+
+Ohjelman logiikka ja tietomalli perustuu luokkiin, jotka kuvaavat projektin (Project) rakennetta projektisuunnitelman tasolla:
 - projektilla on tiimijäseniä (TeamMember)
 - projekti koostuu useista vaiheista (Phase)
 - jokaisessa vaihessaa on tehtäviä (Task), joita tiimijäsenet suorittavat
