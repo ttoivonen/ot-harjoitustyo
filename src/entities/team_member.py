@@ -7,9 +7,9 @@ class TeamMember:
     Attributes:
         name: name of a team member
         role: role of a team member, e.g. project manager, subject matter expert, developer
-        int_hour_rate: internal hourly rate, that is a targeted hourly rate for a team member 
+        int_hour_rate: internal hourly rate, that is a targeted hourly rate for a team member
         to cover the payroll costs of the team member; used in calculating profitablity
-        skills_keywords: list of skills that a team member has, e.g. Python, Java, 
+        skills_keywords: list of skills that a team member has, e.g. Python, Java,
         logistics, accounting
     """
 

@@ -1,14 +1,14 @@
 
 class Project:
-    """Project class represents the highest level in a project structure (Project>Phase>Task) and 
-    and it included general information about the project, e.g. flat EUR rate for 
+    """Project class represents the highest level in a project structure (Project>Phase>Task) and
+    and it included general information about the project, e.g. flat EUR rate for
     invoicing, who is customere etc. Its downstream components are phases, stored in a list.
 
     Attributes:
         project_name: project's name
         customer: organization who is buying the project and/or to whom to a project is done for
         description: a short description of what a project is about; the objective
-        flat_hour_rate: flat (fixed) hourly EUR rate based on which a customer is invoiced and 
+        flat_hour_rate: flat (fixed) hourly EUR rate based on which a customer is invoiced and
         fees are incurred
         team_members: people working in the project team
         project_phases: project consist phases to carry out the mission
@@ -21,7 +21,7 @@ class Project:
             project_name (str): project's name
             customer organization who is buying the project and/or to whom to a project is done for
             description (str): a short description of what a project is about; the objective
-            flat_hour_rate (int): flat (fixed) hourly EUR rate based on which a customer is invoiced and 
+            flat_hour_rate (int): flat (fixed) hourly EUR rate based on which a customer is invoiced and
             fees are incurred
         """
         self.project_name = project_name
@@ -43,7 +43,7 @@ class Project:
         return total_hours
 
     def calculate_total_ext_costs(self):
-        """calculates project's total external costs, i.e. 
+        """calculates project's total external costs, i.e.
         the amount of fees for the customer. Total hours * flat hourly rate.
 
         Returns:

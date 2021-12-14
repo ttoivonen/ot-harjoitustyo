@@ -13,7 +13,7 @@ class Phase:
         """constructor that creates a new Phase
 
         Args:
-            description (str): description of the project phase content, 
+            description (str): description of the project phase content,
             e.g. preparation, sprint 1
         """
         self.description = description

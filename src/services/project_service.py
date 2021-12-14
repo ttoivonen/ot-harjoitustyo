@@ -31,14 +31,16 @@ class ProjectService:
         try:
             deleted = self.active_project.project_phases.pop(phase_index - 1)
             print(f"Project phase {deleted.description} successfully deleted")
+            return True
         except IndexError:
             return False
 
-    def delete_task(self, phase_index: int, task_index):    
+    def delete_task(self, phase_index: int, task_index):
         try:
             delete = self.active_project.project_phases[phase_index - 1].phase_tasks.pop(task_index - 1)
             phase_name = self.active_project.project_phases[phase_index - 1].description
             print(f"Task {delete.task_description} successfully deleted from phase {phase_name}")
+            return True
         except IndexError:
             return False
 
@@ -84,16 +86,18 @@ class ProjectService:
                     print(f"  {phase_index}.{task_index}: {task.task_description}; team member {task_tm_name}; estimated hours {task_hours}")
                     task_index += 1
             phase_index += 1
+        return True
 
 
     def print_project_estimates_total(self):
         if len(self.active_project.project_phases) == 0:
-            return False     
+            return False
         print(self.active_project)
         print(f"Total estimated hours: {self.active_project.calculate_total_hours()}")
         print(f"Total estimated customer costs: EUR {self.active_project.calculate_total_ext_costs()}")
         print(f"Total internal costs: EUR {self.active_project.calculate_total_int_costs()}")
         print(f"Total profitability: EUR {self.active_project.calculate_total_profitability()}")
+        return True
 
 
     def print_project_estimate_phase(self):
