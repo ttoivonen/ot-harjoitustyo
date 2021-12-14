@@ -1,12 +1,12 @@
 # **Arkkitehtuuri**
 
-### **Rakenne**
+## **Rakenne**
 
 Alla on kuvattuna ohjelman luokka- ja pakkauskaavio.
 
 ![..](/dokumentaatio/kuvat/pakkausjaluokkakaavio.png)
 
-### **Käyttöliittymä**
+## **Käyttöliittymä**
 
 Käyttöliittymästä vastaan ProjectManagement-luokka. Luokka vastaa käyttäjän syötteiden vastaanottamisesta ja niiden toimittamisesta sovelluslogiikan luokkaan ProjectService. Käyttöliittymän kautta käyttäjällä kaksi eri päävalikkoa.
 1. Aktiviteettivalikko, josta voi lisätä tai poistaa projektin tietorakenteita (esim. uuden projektivaiheen luominen)
@@ -14,7 +14,7 @@ Käyttöliittymästä vastaan ProjectManagement-luokka. Luokka vastaa käyttäj�
 
 Ohjelma alkaa aktiviteettivalikolla, jonka kautta on mahdollista siirtyä näkymävalikkoon. Näkymävalikosta pääsee siirtymään takaisin aktiviteettivalikkoon.
 
-### **Sovelluslogiikka**
+## **Sovelluslogiikka**
 
 Alla on kuvattuna ohjelman sovelluslogiiikka.
 
@@ -35,7 +35,7 @@ Kun sovelluksella on määritelty projektin eri vaiheet ja vaiheiden eri tehtäv
 Edellämainittujen tietojen perusteella voidaan laskea projektin arvioitu kustannus asiakkaalle (tunnit yhteensä * projektin kiinteä tuntihinta) ja projektin kannattavuus (projektin hinta asiakkaalle - (tiimijäsenkohtainen tuntihinta x tiimijäsenen tunnit) sekä miten kustannukset jakautuvat vaiheittain. 
 
 
-### **Päätoiminnallisuudet**
+## **Päätoiminnallisuudet**
 
 #### **Projektin luominen**
 
