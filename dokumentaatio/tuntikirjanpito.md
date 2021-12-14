@@ -11,9 +11,10 @@
 |30.11.2021 |1              |Arkkitehtuurin viimeistelyä ja poetry-ongelman selvittämistä |
 |4.12.2021 |3,5              |Ohjelman generoimien näyttöjen/raporttien rakentaminen |
 |5.12.2021 |4              |Ohjelman generoimien näyttöjen/raporttien rakentaminen, testien edistäminen |
-|6.12.2021 |4,5              |pylint-palauttaan perusteella koodin laadun parannukset, projektin kuvauksen tekeminen ja sekvenssikaavion lisäys arkkitehtuuriin |
-|7.12.2021 |1,5              |uuden raporttinäkymän ja metodien lisäys sekä testien lisääminen ja GitHub release |
-|11.12.2021 |4              |delete Task ja delete Phase metodien tekeminen, testien lisääminen ja koodin hienosäätö |
-|12.12.2021 |5              |testien lisääminen, docstringin tekeminen sekä dokumentaatio |
+|6.12.2021 |4,5              |Pylint-palauttaan perusteella koodin laadun parannukset, projektin kuvauksen tekeminen ja sekvenssikaavion lisäys arkkitehtuuriin |
+|7.12.2021 |1,5              |Uuden raporttinäkymän ja metodien lisäys sekä testien lisääminen ja GitHub release |
+|11.12.2021 |4              |Delete Task ja delete Phase metodien tekeminen, testien lisääminen ja koodin hienosäätö |
+|12.12.2021 |5              |Testien lisääminen, docstringin tekeminen sekä dokumentaatio |
+|14.12.2021 |1              |Arkkitehtuurin täydentäminen ja pylintin perusteella koodin parantelu |
 
-Yhteensä 48 tuntia (per 12.12.2021)
+Yhteensä 49 tuntia (per 14.12.2021)
