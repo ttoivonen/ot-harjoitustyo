@@ -93,7 +93,7 @@ class ProjectService:
             boolean: True if the operation was successful
         """
         try:
-            delete = self.active_project.project_phases[phase_index - 1].phase_tasks.pop(task_index - 1)
+            delete = self.active_project.project_phases[phase_index-1].phase_tasks.pop(task_index-1)
             phase_name = self.active_project.project_phases[phase_index - 1].description
             print(f"Task {delete.task_description} successfully deleted from phase {phase_name}")
             return True
@@ -174,7 +174,9 @@ class ProjectService:
                 for task in phase.phase_tasks:
                     task_tm_name = task.team_member.name
                     task_hours = task.task_estimated_hours()
-                    print(f"  {phase_index}.{task_index}: {task.task_description}; team member {task_tm_name}; estimated hours {task_hours}")
+                    output1 = f"  {phase_index}.{task_index}: {task.task_description}; "
+                    output2 = f"team member {task_tm_name}; estimated hours {task_hours}"
+                    print(output1 + output2)
                     task_index += 1
             phase_index += 1
         return True
@@ -224,13 +226,16 @@ class ProjectService:
         header2 = f"{prnt_int_costs:<20}{prnt_int_costs_percentage:<25}{prnt_profitability:<20}"
         print(header1+header2)
         for phase in self.active_project.project_phases:
-            ext_cost_percentage = "{:.2f}".format(phase.phase_ext_costs(hourly_rate)  / self.active_project.calculate_total_ext_costs() * 100) + "%"
-            int_cost_percentage = "{:.2f}".format(phase.phase_int_costs() / self.active_project.calculate_total_int_costs() * 100) + "%"
+            ext_cost_percentage = "{:.2f}".format(phase.phase_ext_costs(hourly_rate)  /
+            self.active_project.calculate_total_ext_costs() * 100) + "%"
+            int_cost_percentage = "{:.2f}".format(phase.phase_int_costs() /
+            self.active_project.calculate_total_int_costs() * 100) + "%"
             output1= f"{phase.description:<15}{phase.phase_hours():<20}{phase.phase_ext_costs(hourly_rate):<20}"
             output2 = f"{ext_cost_percentage:<25}{phase.phase_int_costs():<20}{int_cost_percentage:<25}{phase.phase_profitability(hourly_rate):<20}"
             print(output1+output2)
-
-        print(f"{total_prnt:<15}{total_hrs:<20}{total_ext_costs:<20}{total_costs_perc:<25}{total_int_costs:<20}{total_costs_perc:<25}{total_profitability:<20}")
+        total1 = f"{total_prnt:<15}{total_hrs:<20}{total_ext_costs:<20}{total_costs_perc:<25}"
+        total2 = f"{total_int_costs:<20}{total_costs_perc:<25}{total_profitability:<20}"
+        print(total1 + total2)
         return True
 
     def save_to_xlsx(self, file_name: str):

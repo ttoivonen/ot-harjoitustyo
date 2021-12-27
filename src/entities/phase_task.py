@@ -47,4 +47,6 @@ class Task:
         Returns:
             str: Task's description, estimated hours and team member
         """
-        return f"{self.task_description} with estimated hours {self.estimated_hours} for team member {self.team_member.name}"
+        output1 = f"{self.task_description} with estimated hours "
+        output2 = f"{self.estimated_hours} for team member {self.team_member.name}"
+        return output1+output2

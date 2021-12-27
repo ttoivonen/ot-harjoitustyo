@@ -1,6 +1,4 @@
 
-import re
-
 
 class Project:
     """Project class represents the highest level in a project structure (Project>Phase>Task) and
@@ -24,8 +22,8 @@ class Project:
             project_name (str): project's name
             customer organization who is buying the project and/or to whom to a project is done for
             description (str): a short description of what a project is about; the objective
-            flat_hour_rate (int): flat (fixed) hourly EUR rate based on which a customer is invoiced and
-            fees are incurred
+            flat_hour_rate (int): flat (fixed) hourly EUR rate based on which a customer is 
+            invoiced and fees are incurred.
         """
         self.__project_name = project_name
         self.customer = customer

@@ -66,3 +66,17 @@ class TestProjectService(unittest.TestCase):
         self.service_test.create_project_phase("Testing")
         delete_ok = self.service_test.delete_phase(1)
         self.assertEqual(True, delete_ok)
+
+    def test_print_project_estimate_phase(self):
+        self.service_test.create_project_phase("Testing")
+        self.service_test.create_team_member("Dave Developer", "Developer", 10, ["Python"])
+        self.service_test.create_task(1, "Testing", 10, 1)
+        print_ok = self.service_test.print_project_estimate_phase()
+        self.assertEqual(True, print_ok)
+
+    def test_save_to_xlsx(self):
+        self.service_test.create_project_phase("Testing")
+        self.service_test.create_team_member("Dave Developer", "Developer", 10, ["Python"])
+        self.service_test.create_task(1, "Testing", 10, 1)
+        saving_ok = self.service_test.save_to_xlsx("test_file")
+        self.assertEqual(True, saving_ok)
