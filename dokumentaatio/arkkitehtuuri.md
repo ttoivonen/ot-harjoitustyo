@@ -34,6 +34,10 @@ Kun sovelluksella on määritelty projektin eri vaiheet ja vaiheiden eri tehtäv
 - tiimijäsenten hinta (kustannus) palveluntarjoajalle, eli projektin suorittavalle organisaatiolle (oletuksena, että tiimii kostuu eri kokemuksella ja taidoilla varustetuista tiimijäsenistä, joista taitavimmat ovat kalliimpia palveluntarjoajalle).
 Edellämainittujen tietojen perusteella voidaan laskea projektin arvioitu kustannus asiakkaalle (tunnit yhteensä * projektin kiinteä tuntihinta) ja projektin kannattavuus (projektin hinta asiakkaalle - (tiimijäsenkohtainen tuntihinta x tiimijäsenen tunnit) sekä miten kustannukset jakautuvat vaiheittain. 
 
+## **Tietojen tallennus**
+
+Käyttäjän luoma projekti voidaan tallentaa Excel-tiedostoon (xlsx-formaatti) aktiviteettivalikon "6 save project to a Excel file" -ominaisuudella. Käyttäjä antaa tiedoston nimen, ja ohjelma hakee sen jälkeen projektin tiedot tehtävä-tasolta sekä yhteenvedon kannattavuudesta, kuluista ja tunneista. Excel-tiedostoon tallentaminen tapahtuu Pythonin Xlsxwriter-moodulilla, joka on ohjelman riippuvuus.
+
 
 ## **Päätoiminnallisuudet**
 
@@ -42,3 +46,10 @@ Edellämainittujen tietojen perusteella voidaan laskea projektin arvioitu kustan
 Projekti luodaan siten, että käyttöliittymä (ProjectManagement-luokka) pyytää käyttäjää antamaan syötteinä projektin tiedot, kuten esim. nimi ja asiakas. Sen jälkeen käyttöliittymä kutsuu sovelluslogiikkaa (ProjectService-luokka) ja syöttää sovelluslogiikalla luotavan projektin tiedot. Sovelluslogiikka kutsuu sen jälkeen projekin luokkaa (Project-luokka), joka luo "new_project"-olion. Olio asetetaan aktiiviseksi projektiksi sovelluslogiikkaan (sekä tallennetaan listaan, jonka on tarkoitus myöhemmin auttaa sovelluksen laajentamisessa). Sovelluslogiikkaa palauttaa vielä käyttöliittymällä ja käyttäjälle viestin "True" merkiksi, että projektin luominen on onnistunut. Alla on kuvaus projektin luominsen prosessista sekvenssikaavion muodossa.
 
 ![Projektin luominen](/dokumentaatio/kuvat/projektin_luonti.png)
+
+#### **Tiimijäsenen luominen**
+
+Käyttäjä syöttää komennon "1" aktiviteettivalikkossa, jonka jälkeen käyttöliittymä pyytää käyttäjää syöttämään tiimijäsenen tiedot. Sen jälkeen käyttölittymä kutsuu sovelluslogiikkaa, ProjectService-luokkaa, joka saa parametreina tiimijäsenen tiedot. Sovelluslogiikka luo TeamMember-olion ja sen jälkeen lisää uuden tiimijäsenen olion Project-oliossa olevaan team_members-listaan.
+
+![tiimijäsen](/dokumentaatio/kuvat/create_tm_arkkitehtuuri.PNG)
+
