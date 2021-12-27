@@ -53,3 +53,12 @@ Käyttäjä syöttää komennon "1" aktiviteettivalikkossa, jonka jälkeen käyt
 
 ![tiimijäsen](/dokumentaatio/kuvat/create_tm_arkkitehtuuri.PNG)
 
+#### **Näkymien generointi**
+
+Näkymien generoinnilla tarkoitetaan projektin rakenteen perusteella printattavia näkymiä, jotka perustuvat käyttäjän luomaan projektiin. Näkymistä selviää esim. asiakkaan arvioidut kustannukset, palveluntarjoajan sisäiset kustannukset, projektin vaiheet ja tehtävät sekä kannattavuus. 
+
+Näkymän generointi alkaa käyttöliittymästä, jossa käyttäjä antaa syötteen sen mukaan, mikä näkymä halutaan generoida. Käyttölittyymä kutsuu sovellusloogiikkaa, joka kutsuu luokkia sen mukaan, mitä tietoa tarvitaan. Esim. alla sovelluslogiikan luokka ProjectService voi kutsua Phase-luokkaa antamaan tiedot projektivaiheen sisäisistä kustannuksista. Phase-luokkaa suorittaa laskennan palauttaa tulokset. Sovelluslogiikka voi vielä yhdistellä ja muokata tietoja ennen printtausta. Kun operaatiot on suoritettu onnistuneesti, sovelluslogiikka palauttaa vielä sitä kutsuneelle käyttöliittymälle True-boolean-arvon merkiksi onnistuneesta suorituksesta.
+
+Alla kuvattuna yleisellä tasolla näkymien generointi sekvenssikaaviolla.
+![makymien generointi](/dokumentaatio/kuvat/generoi_nakyma.PNG)
+
