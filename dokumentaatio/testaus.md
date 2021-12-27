@@ -19,6 +19,16 @@ Jokaiselle edellä mainitulle entities-hakemiston luokalla on oma testiluokkansa
 
 ## **Testikattavuus**
 
-Testikattavuus on 86 prosenttia. Käyttöliittymä on jätetty testikattavuusraportin ulkopuolelle. 
+Testikattavuus on 86 prosenttia. Käyttöliittymä on jätetty testikattavuusraportin ulkopuolelle. Sovelluslogiikasta testikattavuus ei kata paria tulostusmetodia, jotka on varmistettu manuaalisesti katsomalla tulostus sekä tulostusmetodin käyttämät metodit on testattu luokissaan (esim. Project-luokan calculate_total_profitability()).
 
 ![testikattavuusraportti](/dokumentaatio/kuvat/testikattavuus_2021-12-27.PNG)
+
+## **Järjestelmätestaus**
+
+Järjestelmätestaaminen on tehty manuaalisesti.
+
+## **Toiminnallisuudet**
+
+[Määrittelydokumentin](/dokumentaatio/vaatimusmaarittely.md) toiminnallisuudet, jotka on merkitty toteutuneiksi/tehdyiksi, on testattu sekä yksikkö- että integraatiotestauksessa. Manuaalinen testaus ajamalla ohjelmaa eri syötteillä on myös ollut suuressa osassa.
+
+Huom. puutteita on voinut jäädä testaamalla vääriä syötteitä.
