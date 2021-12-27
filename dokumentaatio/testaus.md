@@ -20,3 +20,5 @@ Jokaiselle edellä mainitulle entities-hakemiston luokalla on oma testiluokkansa
 ## **Testikattavuus**
 
 Testikattavuus on 86 prosenttia. Käyttöliittymä on jätetty testikattavuusraportin ulkopuolelle. 
+
+![testikattavuusraportti](/dokumentaatio/kuvat/testikattavuus_2021-12-27.PNG)
