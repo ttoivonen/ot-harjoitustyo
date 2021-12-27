@@ -23,6 +23,8 @@ Sovellus on kirjoitettu Pythonilla ja sen riippuvuudeksi on määritelty Python-
 
 [Tuntikirjanpito](https://github.com/ttoivonen/ot-harjoitustyo/blob/master/dokumentaatio/tuntikirjanpito.md)
 
+[Testausdokumentti](https://github.com/ttoivonen/ot-harjoitustyo/blob/master/dokumentaatio/testaus.md)
+
 [Käyttöohje](https://github.com/ttoivonen/ot-harjoitustyo/blob/master/dokumentaatio/kayttoohje.md)
 
 
