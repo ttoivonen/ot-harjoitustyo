@@ -21,3 +21,13 @@ class TestPhase(unittest.TestCase):
     def test_calculate_int_costs(self):
         int_cost_test = self.phase_test.phase_int_costs()
         self.assertEqual(int_cost_test, 1000)
+
+    def test_calculate_ext_costs(self):
+        hourly_rate = 100
+        ext_costs_test = self.phase_test.phase_ext_costs(hourly_rate)
+        self.assertEqual(2000, ext_costs_test)
+
+    def test_calculate_profitability(self):
+        hourly_rate = 100
+        profitability_test = self.phase_test.phase_profitability(hourly_rate)
+        self.assertEqual(1000, profitability_test)

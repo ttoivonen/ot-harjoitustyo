@@ -8,21 +8,14 @@ class ProjectManagement:
         self.service = ProjectService()
 
     def start(self):
-        if len(self.service.projects) == 0:
-            #first mandatory step is to create a project
-            print("Start by creating a new project")
-            self.define_project_activity()
-            #after project is created, you can create team members, phases and tasks
-            #remember: a phase is mandatory to create a task
-            # and a team member is mandatory for a task
-        else:
-            #to be added option to create several projects and to change active
-            # project among created/existing projects for modification or deletion
-            pass
+        #first mandatory step is to create a project
+        print("Start by creating a new project")
+        self.define_project_activity()
+
         while True:
             #this is the main menu where user can choose activities
             #command 4 will move user to display view menu
-            self.print_main_command_options()
+            self.print_activity_command_options()
             command = input("Select activity: ")
             if command == "x":
                 break
@@ -37,6 +30,8 @@ class ProjectManagement:
             elif command == "5":
                 self.delete_task_activity()
             elif command == "6":
+                self.save_to_file()
+            elif command == "7":
                 while True:
                     #display options are below
                     self.print_display_command_options()
@@ -64,7 +59,7 @@ class ProjectManagement:
 
     def define_project_activity(self):
         #hard coded test inputs to save some time in building and testing
-        hard_coded_test_inputs = False
+        hard_coded_test_inputs = True
         if hard_coded_test_inputs:
             project_name = "ERP implementation"
             customer_name = "Company Oy"
@@ -100,12 +95,12 @@ class ProjectManagement:
             else:
                 tm_skills_kw.append(tm_skill)
         if self.service.create_team_member(tm_name, tm_role, tm_int_rate, tm_skills_kw) == True:
-            print(f"Team member {tm_name} successfully created to project {self.service.active_project.project_name}")
+            print(f"Team member {tm_name} successfully created to project {self.service.active_project.project_name()}")
 
     def create_project_phase_activity(self):
         ph_description = input("A description of the phase: ")
         if self.service.create_project_phase(ph_description) == True:
-            print(f"Project phase {ph_description} successfully created to project {self.service.active_project.project_name}")
+            print(f"Project phase {ph_description} successfully created to project {self.service.active_project.project_name()}")
 
     def create_task_to_phase_activity(self):
         if self.service.print_phases() == False:
@@ -123,7 +118,8 @@ class ProjectManagement:
                     break
                 except ValueError:
                     print("Incorrect value. Estimated hours must be a number value (integer).")
-            self.service.create_task(select_phase, task_description, estimated_hr, tm_for_task)
+            if self.service.create_task(select_phase, task_description, estimated_hr, tm_for_task):
+                print(f"Task {task_description} successfully created")
     
     def delete_phase_activity(self):
         if self.service.print_phases() == False:
@@ -151,10 +147,16 @@ class ProjectManagement:
                 break
             except ValueError:
                 print("Incorrect value. Selection must be in a format [phase].[task], e.g. 1.2.")
+
+    def save_to_file(self):
+        file_name = input("Enter file name: ")
+        if self.service.save_to_xlsx(file_name) == True:
+            print("File " + file_name + ".xlsx created successufully to src/saved_project_files")
         
-    def print_main_command_options(self):
+    def print_activity_command_options(self):
         commands_main = {"1": "add team members to the project team", "2": "create a project phase",
-        "3": "add a task to a project phase", "4": "delete a project phase", "5": "delete a task from a phase", "6": "show display options", "x": "exit"}
+        "3": "add a task to a project phase", "4": "delete a project phase", "5": "delete a task from a phase",
+        "6": "save project to a Excel file", "7": "show display options", "x": "exit"}
         print("\nSelect action")
         for command_key, command_value in commands_main.items():
             print(f"{command_key} {command_value}")

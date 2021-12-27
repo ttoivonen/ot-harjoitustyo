@@ -1,4 +1,6 @@
 import unittest
+from entities.project_phase import Phase
+from entities.team_member import TeamMember
 from services.project_service import ProjectService
 from entities.project import Project
 
@@ -9,7 +11,7 @@ class TestProjectService(unittest.TestCase):
         customer_test = "Company Oy"
         description_test = "Plan a software"
         hourly_rate_test = 100
-
+      
         self.service_test.create_project(name_test, customer_test, description_test, hourly_rate_test)
 
     def test_create_project(self):
@@ -32,10 +34,6 @@ class TestProjectService(unittest.TestCase):
         self.assertEqual(boolean_test_create, True)
         self.assertEqual(self.service_test.print_team_members(), True)
 
-    def test_print_project(self):
-        print_test = "Software design for customer Company Oy with objective of Plan a software"
-        self.assertEqual(print(print_test), self.service_test.print_project())
-
     def test_create_project_phase(self):
         phase_description_test = "Preparation"
         boolean_test = self.service_test.create_project_phase(phase_description_test)
@@ -44,3 +42,27 @@ class TestProjectService(unittest.TestCase):
         self.assertEqual(self.service_test.print_phases(), True)
         self.assertEqual(phase_amount_test, 1)
 
+    def test_create_task(self):
+        self.service_test.create_project_phase("Testing")
+        self.service_test.create_team_member("Dave Developer", "Developer", 10, ["Python"])
+
+        boolean_test = self.service_test.create_task(1, "test task", 10, 1)
+        self.assertEqual(True, boolean_test)
+
+    def test_print_tasks(self):
+        self.service_test.create_project_phase("Testing")
+        self.service_test.create_team_member("Dave Developer", "Developer", 10, ["Python"])
+        print_ok_test = self.service_test.print_tasks()
+        self.assertEqual(True, print_ok_test)
+
+    def test_delete_task(self):
+        self.service_test.create_project_phase("Testing")
+        self.service_test.create_team_member("Dave Developer", "Developer", 10, ["Python"])
+        self.service_test.create_task(1, "Testing", 10, 1)
+        delete_ok = self.service_test.delete_task(1, 1)
+        self.assertEqual(True, delete_ok)
+
+    def test_delete_phase(self):
+        self.service_test.create_project_phase("Testing")
+        delete_ok = self.service_test.delete_phase(1)
+        self.assertEqual(True, delete_ok)

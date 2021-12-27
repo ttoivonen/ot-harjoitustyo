@@ -1,4 +1,7 @@
 
+import re
+
+
 class Phase:
     """Phase class represents a phase in a project. There can be multiple phases
     associated to a project. A phase consists of task(s) that are performed
@@ -41,3 +44,25 @@ class Phase:
         for task in self.phase_tasks:
             int_cost += task.task_estimated_int_cost()
         return int_cost
+
+    def phase_ext_costs(self, hourly_rate: int):
+        """Calculates and returns customer (external) costs for the phase
+
+        Args:
+            hourly_rate (int): fixed/flat hourly rate defined on the project level
+
+        Returns:
+            int: phase's total customer (external) costs
+        """
+        return self.phase_hours() * hourly_rate
+
+    def phase_profitability(self, hourly_rate: int):
+        """Calculates and returns profitability of the phase
+
+        Args:
+            hourly_rate (int): fixed/flat hourly rate defined on the project level
+
+        Returns:
+            [type]: phase's total profitability
+        """
+        return self.phase_ext_costs(hourly_rate) - self.phase_int_costs()

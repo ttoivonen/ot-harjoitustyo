@@ -1,4 +1,7 @@
 
+import re
+
+
 class Project:
     """Project class represents the highest level in a project structure (Project>Phase>Task) and
     and it included general information about the project, e.g. flat EUR rate for
@@ -24,12 +27,28 @@ class Project:
             flat_hour_rate (int): flat (fixed) hourly EUR rate based on which a customer is invoiced and
             fees are incurred
         """
-        self.project_name = project_name
+        self.__project_name = project_name
         self.customer = customer
         self.description = description
-        self.flat_hour_rate = flat_hour_rate
+        self.__flat_hour_rate = flat_hour_rate
         self.team_members = []
         self.project_phases = []
+
+    def hour_rate(self):
+        """Returns project's flat hour rate
+
+        Returns:
+            int: project hourly rate
+        """
+        return self.__flat_hour_rate
+
+    def project_name(self):
+        """Return project's name
+
+        Returns:
+            str: project name
+        """
+        return self.__project_name
 
     def calculate_total_hours(self):
         """Calculates the total hours associated the project
@@ -49,7 +68,7 @@ class Project:
         Returns:
             int: total external EUR costs of the project
         """
-        total_ext_costs = self.calculate_total_hours() * self.flat_hour_rate
+        total_ext_costs = self.calculate_total_hours() * self.hour_rate()
         return total_ext_costs
 
     def calculate_total_int_costs(self):
@@ -80,4 +99,4 @@ class Project:
         Returns:
             str: project summary
         """
-        return f"{self.project_name} for customer {self.customer} with objective of {self.description}"
+        return f"{self.__project_name} for customer {self.customer} with objective of {self.description}"
