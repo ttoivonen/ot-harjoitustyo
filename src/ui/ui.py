@@ -48,7 +48,8 @@ class ProjectManagement:
                         if self.service.print_tasks() == False:
                             print("No tasks existing")
                     elif display_command == "4":
-                        self.service.print_project_estimate_phase()
+                        if self.service.print_project_estimate_phase() == False:
+                            print("No project phases or tasks created.")
                     elif display_command == "5":
                         if self.service.print_project_estimates_total() == False:
                             print("No project phases or tasks created.")

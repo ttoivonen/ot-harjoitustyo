@@ -208,7 +208,6 @@ class ProjectService:
             boolean: True if any phases and tasks exists for the calculation
         """
         if len(self.active_project.project_phases) == 0:
-            print("No project phases or tasks created.")
             return False
         phase_prnt = "Phase"
         prnt_hours = "Estimated hours"
