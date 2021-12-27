@@ -59,7 +59,7 @@ class ProjectManagement:
 
     def define_project_activity(self):
         #hard coded test inputs to save some time in building and testing
-        hard_coded_test_inputs = True
+        hard_coded_test_inputs = False
         if hard_coded_test_inputs:
             project_name = "ERP implementation"
             customer_name = "Company Oy"
