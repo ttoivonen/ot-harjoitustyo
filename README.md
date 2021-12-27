@@ -15,6 +15,9 @@ Sovellus on kirjoitettu Pythonilla ja sen riippuvuudeksi on määritelty Python-
 
 [Release 2 (2021-12-14)](https://github.com/ttoivonen/ot-harjoitustyo/releases/tag/viikko6)
 
+[Loppupalautus (2021-12-27)](https://github.com/ttoivonen/ot-harjoitustyo/releases/tag/loppupalautus)
+
+
 ## **Dokumentaatio**
 
 [Vaatimusmäärittely](https://github.com/ttoivonen/ot-harjoitustyo/blob/master/dokumentaatio/vaatimusmaarittely.md)
