@@ -59,23 +59,15 @@ class ProjectManagement:
                 print("Unknown command")
 
     def define_project_activity(self):
-        #hard coded test inputs to save some time in building and testing
-        hard_coded_test_inputs = False
-        if hard_coded_test_inputs:
-            project_name = "ERP implementation"
-            customer_name = "Company Oy"
-            project_description = "Implementation of core S4HANA processes"
-            hourly_rate = 100
-        else:
-            project_name = input("Name of the project: ")
-            customer_name = input("Customer: ")
-            project_description = input("Description of the project: ")
-            while True:
-                try:
-                    hourly_rate = int(input("Hourly rate (EUR): "))
-                    break
-                except ValueError:
-                    print("Incorrect value. Hourly rate must be a number value (integer).")
+        project_name = input("Name of the project: ")
+        customer_name = input("Customer: ")
+        project_description = input("Description of the project: ")
+        while True:
+            try:
+                hourly_rate = int(input("Hourly rate (EUR): "))
+                break
+            except ValueError:
+                print("Incorrect value. Hourly rate must be a number value (integer).")
         if self.service.create_project(project_name, customer_name, project_description, hourly_rate) == True:
             print(f"Project {project_name} created successfully.")
     
