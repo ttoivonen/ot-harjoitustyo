@@ -38,7 +38,7 @@ The application can be utilized to document the expected project tasks and neede
   - One view shows total estimated hours and price of the Project [**DONE - week 5**]
   - One view shows estimated hours, customer costs, internal costs, percentage of total costs and profitability on project phase level (new feature - week 4) [**DONE week 5-7**]
   - One view shows to the estimated profitability of the project ((total hours x flat rate) – (total hours x team member specific hourly rate)) [**DONE week 6-7**]
-- User is able to export the project with its components to a(n Excel) file (new feature - week 5) [**DONE week 6-7**]
+- User is able to export the project with its components to a(n Excel) file (new feature - week 5) [**DONE week 7**]
 - Application can be run in Graphical User Interface (new feature - week 6) [**Failed**]
 
 ### **Environment requirements**
