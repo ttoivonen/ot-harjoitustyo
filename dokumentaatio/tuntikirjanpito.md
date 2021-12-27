@@ -16,5 +16,10 @@
 |11.12.2021 |4              |Delete Task ja delete Phase metodien tekeminen, testien lisääminen ja koodin hienosäätö |
 |12.12.2021 |5              |Testien lisääminen, docstringin tekeminen sekä dokumentaatio |
 |14.12.2021 |1              |Arkkitehtuurin täydentäminen ja pylintin perusteella koodin parantelu |
+|18.12.2021 |4,5              |Tkinterin opettelua: Youtube-videoita ja pienten ominaisuuksien toteutusta "hiekkalaatikolla" |
+|22.12.2021 |1              |Tkinterin opettelua: Youtube-videoita ja pienten ominaisuuksien toteutusta "hiekkalaatikolla" |
+|24.12.2021 |2              |Ohjelman GUI:n rakentamista Tkinterillä |
+|26.12.2021 |5              |Viimeiset tkinter-rimpuilut ja luovutus työmaan edessä, sillä osaaminen ja käytettävissä oleva aika eivät kohtaa. Lisäksi xlsxwriterin opettelu ja tiedostoon tallennuksen toiminnallisuuden toteutus, ja projektivaiheiden prosentuaalinen esitys generoiduissa näkymissä |
+|27.12.2021 |7              |koodin suoraviivaistaminen (kapselointia, parin metodin lisäys, turhan koodin poistaminen) docstring-dokumentaatio, pylint-parannukset, testien lisääminen ja dokumentaatio ym. kurssin viimeistely |
 
-Yhteensä 49 tuntia (per 14.12.2021)
+Yhteensä 68,5 tuntia (per 27.12.2021)
