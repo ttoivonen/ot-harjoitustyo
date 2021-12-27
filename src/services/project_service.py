@@ -73,6 +73,8 @@ class ProjectService:
         Returns:
             boolean: True if the operation was successful
         """
+        if len(self.active_project.project_phases) == 0:
+            return False
         try:
             deleted = self.active_project.project_phases.pop(phase_index - 1)
             print(f"Project phase {deleted.description} successfully deleted")

@@ -124,6 +124,7 @@ class ProjectManagement:
     def delete_phase_activity(self):
         if self.service.print_phases() == False:
             print("No existing phases for the project to be deleted")
+            return
         while True:
             try:
                 delete_index = int(input("Select the phase to be deleted (integer number): "))
@@ -136,9 +137,13 @@ class ProjectManagement:
     def delete_task_activity(self):
         if self.service.print_tasks() == False:
             print("No tasks to be deleted due non-existing project phases")
+            return
         while True:
             try:
                 delete_number = input("Select the task to be deleted (in format [phase].[task], e.g. 1.2): ")
+                if delete_number.find(".") < 0:
+                    print("Wrong index number")
+                    return
                 delete_number_parts = delete_number.split(".")
                 delete_phase_index = int(delete_number_parts[0])
                 delete_task_index = int(delete_number_parts[1])
